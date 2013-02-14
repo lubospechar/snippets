@@ -10,7 +10,7 @@
   <displayprefix>Django</displayprefix>
   <match>integerfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (verbose_name = '', help_text = '')</displayarguments>
+  <displayarguments> (verbose_name, help_text)</displayarguments>
   <fillin>models.IntegerField(verbose_name = '%{verbose_name}', help_text = '%{help_text}')</fillin>
  </item>
  <item>
@@ -24,7 +24,7 @@
   <displayprefix>Django</displayprefix>
   <match>c_models</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments>(models.Model)</displayarguments>
+  <displayarguments></displayarguments>
   <fillin>class %{name}(models.Model):</fillin>
  </item>
  <item>
@@ -38,77 +38,77 @@
   <displayprefix>Django</displayprefix>
   <match>integerfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (verbose_name = '', help_text = '', null = True, blank = True)</displayarguments>
+  <displayarguments> (verbose_name, help_text, null, blank)</displayarguments>
   <fillin>models.IntegerField(verbose_name = '%{verbose_name}', help_text = '%{help_text}', null = True, blank = True)</fillin>
  </item>
  <item>
   <displayprefix>Django</displayprefix>
   <match>integerfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (verbose_name = '', help_text = '', unique = True)</displayarguments>
+  <displayarguments> (verbose_name, help_text, unique)</displayarguments>
   <fillin>models.IntegerField(verbose_name = '%{verbose_name}', help_text = '%{help_text}', unique = True)</fillin>
  </item>
  <item>
   <displayprefix>Django</displayprefix>
   <match>integerfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (verbose_name = '', unique = True)</displayarguments>
+  <displayarguments> (verbose_name, unique)</displayarguments>
   <fillin>models.IntegerField(verbose_name = '%{verbose_name}', unique = True)</fillin>
  </item>
  <item>
   <displayprefix>Django</displayprefix>
   <match>charfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments>(max_length = 255, verbose_name = '')</displayarguments>
+  <displayarguments> (max_length, verbose_name)</displayarguments>
   <fillin>models.CharField(max_length = %{255}, verbose_name = '%{verbose_name}')</fillin>
  </item>
  <item>
   <displayprefix>Django</displayprefix>
   <match>charfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (max_length = 255, verbose_name = '', help_text = '')</displayarguments>
+  <displayarguments> (max_length, verbose_name, help_text)</displayarguments>
   <fillin>models.CharField(max_length = %{255}, verbose_name = '%{verbose_name}', help_text = '%{help_text}')</fillin>
  </item>
  <item>
   <displayprefix>Django</displayprefix>
   <match>charfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (max_length = 255, verbose_name = '', null = True, blank = True)</displayarguments>
+  <displayarguments> (max_length, verbose_name , null, blank)</displayarguments>
   <fillin>models.CharField(max_length = %{255}, verbose_name = '%{verbose_name}', null = True, blank = True)</fillin>
  </item>
  <item>
   <displayprefix>Django</displayprefix>
   <match>charfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (max_length = 255, verbose_name = '', help_text = '', null = True, blank = True)</displayarguments>
+  <displayarguments> (max_length, verbose_name, help_text, null, blank)</displayarguments>
   <fillin>models.CharField(max_length = %{255}, verbose_name = '%{verbose_name}', help_text = '%{help_text}', null = True, blank = True)</fillin>
  </item>
  <item>
   <displayprefix>Django</displayprefix>
   <match>charfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (max_length = 255, verbose_name = '', help_text = '', unique = True)</displayarguments>
+  <displayarguments> (max_length, verbose_name, help_text, unique)</displayarguments>
   <fillin>models.CharField(max_length = %{255}, verbose_name = '%{verbose_name}', help_text = '%{help_text}', unique = True)</fillin>
  </item>
  <item>
   <displayprefix>Django</displayprefix>
   <match>charfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (max_length = 255, verbose_name = '', unique = True)</displayarguments>
+  <displayarguments> (max_length, verbose_name, unique)</displayarguments>
   <fillin>models.CharField(max_length = %{255}, verbose_name = '%{verbose_name}', unique = True)</fillin>
  </item>
  <item>
   <displayprefix>Django</displayprefix>
   <match>foreignkey</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (verbose_name = '')</displayarguments>
+  <displayarguments> (verbose_name)</displayarguments>
   <fillin>models.ForeignKey(%{key}, verbose_name = '%{verbose_name}')</fillin>
  </item>
  <item>
   <displayprefix>Django</displayprefix>
   <match>charfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (max_length = 255, unique = True)</displayarguments>
+  <displayarguments> (max_length, unique)</displayarguments>
   <fillin>models.CharField(max_length = %{255}, unique = True)</fillin>
  </item>
  <item>
