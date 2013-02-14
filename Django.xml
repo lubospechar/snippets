@@ -3,7 +3,7 @@
   <displayprefix>Django</displayprefix>
   <match>integerfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments>(verbose_name = '')</displayarguments>
+  <displayarguments> (verbose_name)</displayarguments>
   <fillin>models.IntegerField(verbose_name = '%{verbose_name}')</fillin>
  </item>
  <item>
@@ -22,8 +22,8 @@
  </item>
  <item>
   <displayprefix>Django</displayprefix>
-  <match>m_class</match>
-  <displaypostfix></displaypostfix>
+  <match>c_models</match>
+  <displaypostfix>models</displaypostfix>
   <displayarguments>(models.Model)</displayarguments>
   <fillin>class %{name}(models.Model):</fillin>
  </item>
@@ -31,7 +31,7 @@
   <displayprefix>Django</displayprefix>
   <match>integerfield</match>
   <displaypostfix>models</displaypostfix>
-  <displayarguments> (verbose_name = '', null = True, blank = True)</displayarguments>
+  <displayarguments> (verbose_name, null, blank)</displayarguments>
   <fillin>models.IntegerField(verbose_name = '%{verbose_name}', null = True, blank = True)</fillin>
  </item>
  <item>
@@ -55,9 +55,7 @@
   <displayarguments> (verbose_name = '', unique = True)</displayarguments>
   <fillin>models.IntegerField(verbose_name = '%{verbose_name}', unique = True)</fillin>
  </item>
- 
- 
-  <item>
+ <item>
   <displayprefix>Django</displayprefix>
   <match>charfield</match>
   <displaypostfix>models</displaypostfix>
@@ -98,5 +96,111 @@
   <displaypostfix>models</displaypostfix>
   <displayarguments> (max_length = 255, verbose_name = '', unique = True)</displayarguments>
   <fillin>models.CharField(max_length = %{255}, verbose_name = '%{verbose_name}', unique = True)</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>foreignkey</match>
+  <displaypostfix>models</displaypostfix>
+  <displayarguments> (verbose_name = '')</displayarguments>
+  <fillin>models.ForeignKey(%{key}, verbose_name = '%{verbose_name}')</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>charfield</match>
+  <displaypostfix>models</displaypostfix>
+  <displayarguments> (max_length = 255, unique = True)</displayarguments>
+  <fillin>models.CharField(max_length = %{255}, unique = True)</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>foreignkey</match>
+  <displaypostfix>models</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>models.ForeignKey(%{key})</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>integerfield</match>
+  <displaypostfix>models</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>models.IntegerField()</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>datetimefield</match>
+  <displaypostfix>models</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>models.DateTimeField()</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>a_reg</match>
+  <displaypostfix>admin</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>admin.site.register(%{Model})</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>c_meta</match>
+  <displaypostfix>models</displaypostfix>
+  <displayarguments> (verbose_name, verbose_name_plural)</displayarguments>
+  <fillin>class Meta:
+	verbose_name = '%{verbose_name}'
+	verbose_name_plural = '%{verbose_name_plural}'</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>c_meta</match>
+  <displaypostfix>models</displaypostfix>
+  <displayarguments> (verbose_name, verbose_name_plural, ordering)</displayarguments>
+  <fillin>class Meta:
+	verbose_name = '%{verbose_name}'
+	verbose_name_plural = '%{verbose_name_plural}'
+	ordering = ['%{ordering}']</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>d_unicode</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>def __unicode__(self):
+	return self.%{unicode}</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>c_admin</match>
+  <displaypostfix>admin</displaypostfix>
+  <displayarguments> (fields)</displayarguments>
+  <fillin>class %{Model}Admin(admin.ModelAdmin):
+	fields = ('%{fields}')
+	pass
+
+admin.site.register(%{Model}, %{Model}Admin)</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>c_admin</match>
+  <displaypostfix>admin</displaypostfix>
+  <displayarguments> (list_filter, list_display)</displayarguments>
+  <fillin>class %{Model}Admin(admin.ModelAdmin):
+	list_filter = ('%{list_filter}',)
+	list_display = ('%{list_display}',)
+	pass
+
+admin.site.register(%{Model}, %{Model}Admin)</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>booleanfield</match>
+  <displaypostfix>modles</displaypostfix>
+  <displayarguments> (verbose_name)</displayarguments>
+  <fillin>models.BooleanField(verbose_name = '%{verbose_name}')</fillin>
+ </item>
+ <item>
+  <displayprefix>Django</displayprefix>
+  <match>floatfield</match>
+  <displaypostfix>models</displaypostfix>
+  <displayarguments> (verbose_name)</displayarguments>
+  <fillin>models.FloatField(verbose_name = '%{verbose_name}')</fillin>
  </item>
 </snippets>
